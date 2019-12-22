@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tetris</title>
+    <link rel="stylesheet" type="text/css" href="/style/tetris.css" />
+    
+    <script src="/scripts/drawing.js" defer"></script>
+    <script src="/scripts/gamelogic.js" defer=></script>
+    <script src="/scripts/tetrislogic.js" defer></script>
+    <script src="/scripts/tetrispiece.js" defer></script>
+    <script src="/scripts/helper.js" defer></script></script>
+    <script src="/scripts/controls.js" defer></script>
+    <script src="/scripts/startup.js" defer></script>
+</head>
+<body>
+    
+    
+    
+    <div id="OuterContainer">
+        <header>Jeff's Tetris</header>
+        <div id="gameContainer">
+            <div id = "controls">
+                
+                <div id="score" class="board"> 
+                    Score
+                    <p id= "scoreHolder" class="scoreText">0</p>
+                    <div id = "level">
+                        Level
+                        <p id="levelHolder" class="scoreText">0</p>
+                    </div>
+                    <div id = "rowsCleared">
+                        Rows Cleared
+                        <p id = "rowsHolder" class="scoreText">0</p>
+                    </div>
+                </div>
+                  
+                <button id ="Start" onlcick = "startPressed">Start</button>
+                <button id ="End" onclick = "endPressed">End</button>
+                
+                <div id="musicSwitchHolder">
+                    <p>Music:</p>
+                    <label class="switch">
+                        <input type="checkbox" id ="musicSwitch" onchange="toggleMusic">
+                        <span class="slider round"></span>
+                        
+                      </label>                
+                </div>
+            </div>
+            
+            <div id="game" class="board">
+                <canvas id = "tetris">
+    
+                </canvas>                  
+            </div>
+             
+         
+            <div id= "nextPiece">
+                Next Piece
+                <div id="next" class="board">
+                    <canvas id = "upcomingPiece">
+                        
+                    </canvas>
+                </div>
+            </div>
+                        
+        </div>
+        <audio controls id="musicSource">
+            <source src="/resources/Tetris.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+</body>
+</html>
